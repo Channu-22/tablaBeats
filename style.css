@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+     
+}
+
+.container h1{
+    
+    font-family: 'Poppins', sans-serif; 
+    font-size: 20px; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+    
+    padding: 10px 0;
+    width: 100%;
+    
+}
+.container {
+    font-family: 'Poppins', sans-serif;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.band {
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.box {
+    width: 180px; 
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.box h1 {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+    .band {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .box {
+        width: 90%; 
+        height: 200px; 
+    }
+
+    .box h1 {
+        font-size: 16px; 
+        padding: 8px 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 18px; 
+        letter-spacing: 1px; 
+    }
+
+    .box {
+        width: 95%; 
+        height: 180px;
+    }
+
+    .box h1 {
+        font-size: 14px; 
+        padding: 6px 0;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .band {
+        gap: 15px; 
+    }
+
+    .box {
+        width: 160px; 
+        height: 160px;
+    }
+}
+
+
